@@ -1,8 +1,8 @@
 {
-  "name": "shugly-iraq",
+  "name": "shugly",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/shugly-iraq",
+  "homepage": "https://ya95hya.github.io/shugly",
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.8.2",
