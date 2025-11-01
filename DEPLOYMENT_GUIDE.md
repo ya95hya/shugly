@@ -96,7 +96,7 @@
      "deploy": "gh-pages -d build",
      ...
    },
-   "homepage": "https://username.github.io/shugly-iraq"
+   "homepage": "https://ya95hya.github.io/shugly"
    ```
 
 3. **النشر:**

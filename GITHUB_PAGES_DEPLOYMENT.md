@@ -17,7 +17,7 @@
 1. اذهب إلى [GitHub.com](https://github.com) وسجل الدخول
 2. اضغط على زر **"+"** في أعلى الصفحة → **"New repository"**
 3. املأ التفاصيل:
-   - **Repository name:** `shugly-iraq` (أو أي اسم تريده)
+   - **Repository name:** `shugly`
    - **Visibility:** اختر **Public** (GitHub Pages المجاني يتطلب public repo)
    - **لا تضع** علامة على "Initialize this repository with a README"
 4. اضغط **"Create repository"**
@@ -38,32 +38,24 @@ git add .
 # ارفع التغييرات
 git commit -m "Initial commit - Ready for GitHub Pages"
 
-# أضف المستودع البعيد (استبدل YOUR_USERNAME باسم المستخدم الفعلي)
-git remote add origin https://github.com/YOUR_USERNAME/shugly-iraq.git
+# أضف المستودع البعيد
+git remote add origin https://github.com/ya95hya/shugly.git
 
 # رفع المشروع
 git branch -M main
 git push -u origin main
 ```
 
-**ملاحظة:** استبدل `YOUR_USERNAME` باسم المستخدم الفعلي على GitHub.
-
 ---
 
 ### الخطوة 3: تحديث package.json
 
 1. افتح ملف `package.json`
-2. ابحث عن السطر:
+2. تأكد من أن السطر:
    ```json
-   "homepage": "https://YOUR_USERNAME.github.io/shugly-iraq"
+   "homepage": "https://ya95hya.github.io/shugly"
    ```
-3. استبدل `YOUR_USERNAME` باسم المستخدم الفعلي على GitHub
-4. إذا كان اسم المستودع مختلف، استبدل `shugly-iraq` باسم المستودع الفعلي
-
-**مثال:**
-```json
-"homepage": "https://yahya.github.io/shugly-iraq"
-```
+   موجود وصحيح
 
 ---
 
@@ -98,7 +90,7 @@ npm run deploy
 
 - قد يستغرق النشر من 1-5 دقائق
 - بعد النشر، ستجد الرابط في صفحة **Settings → Pages**
-- الرابط سيكون مثل: `https://YOUR_USERNAME.github.io/shugly-iraq`
+- الرابط سيكون: `https://ya95hya.github.io/shugly`
 
 ---
 
@@ -108,7 +100,7 @@ npm run deploy
 2. اختر مشروعك **shugly**
 3. اضغط على **Authentication** → **Settings** → **Authorized domains**
 4. اضغط **"Add domain"**
-5. أدخل نطاق GitHub Pages: `YOUR_USERNAME.github.io`
+5. أدخل نطاق GitHub Pages: `ya95hya.github.io`
 6. اضغط **Add**
 
 **مهم:** بدون هذه الخطوة، لن يعمل تسجيل الدخول!
@@ -163,7 +155,7 @@ npm run deploy
 
 ### المشكلة 4: Firebase لا يعمل
 **الحل:** تأكد من:
-- إضافة `YOUR_USERNAME.github.io` في Firebase Authorized domains
+- إضافة `ya95hya.github.io` في Firebase Authorized domains
 - إضافة `github.io` أيضاً إذا لزم الأمر
 
 ---
@@ -201,7 +193,7 @@ npm run deploy
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/shugly-iraq.git
+git remote add origin https://github.com/ya95hya/shugly.git
 git branch -M main
 git push -u origin main
 npm run deploy

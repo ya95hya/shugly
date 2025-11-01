@@ -5,7 +5,7 @@
 ### الخطوة 1: إنشاء مستودع جديد
 1. اذهب إلى [github.com](https://github.com) وسجل الدخول
 2. اضغط على زر **"+"** → **"New repository"**
-3. اسم المستودع: `shugly-iraq`
+3. اسم المستودع: `shugly`
 4. اختر **Public** ⚠️ (مطلوب للنشر المجاني)
 5. **لا تضع** علامة على "Initialize with README"
 6. اضغط **"Create repository"**
@@ -21,11 +21,11 @@
 ### الخطوة 3: تحديث package.json
 1. في GitHub، اضغط على ملف `package.json`
 2. اضغط على أيقونة القلم ✏️ (Edit)
-3. عدّل السطر:
+3. تأكد من السطر:
    ```json
-   "homepage": "https://YOUR_USERNAME.github.io/shugly-iraq"
+   "homepage": "https://ya95hya.github.io/shugly"
    ```
-   استبدل `YOUR_USERNAME` باسم المستخدم الفعلي
+   يجب أن يكون موجوداً وصحيحاً
 4. اضغط **"Commit changes"**
 
 ### الخطوة 4: النشر على GitHub Pages
@@ -107,7 +107,7 @@ jobs:
 ### الخطوة 6: انتظر النشر
 - بعد دقيقتين، اذهب إلى **Actions** tab في المستودع
 - ستجد workflow يعمل، انتظر حتى يكتمل ✅
-- موقعك سيكون على: `https://YOUR_USERNAME.github.io/shugly-iraq`
+- موقعك سيكون على: `https://ya95hya.github.io/shugly`
 
 ---
 
@@ -120,7 +120,7 @@ jobs:
 
 ### الخطوة 2: إنشاء مستودع
 1. في GitHub Desktop: **File** → **New Repository**
-2. **Name:** `shugly-iraq`
+2. **Name:** `shugly`
 3. **Local Path:** اختر مكان المشروع
 4. اضغط **"Create Repository"**
 

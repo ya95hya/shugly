@@ -107,7 +107,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/shugly-iraq.git
+git remote add origin https://github.com/ya95hya/shugly.git
 git push -u origin main
 npm run deploy
 ```

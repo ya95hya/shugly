@@ -8,7 +8,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/username/shugly-iraq.git
+git remote add origin https://github.com/ya95hya/shugly.git
 git push -u origin main
 ```
 
@@ -17,10 +17,10 @@ git push -u origin main
 1. **اذهب إلى:** [vercel.com](https://vercel.com)
 2. **اضغط:** "Sign Up" أو "Login" باستخدام GitHub
 3. **اضغط:** "Add New..." → "Project"
-4. **اختر:** المستودع الخاص بك (shugly-iraq)
+4. **اختر:** المستودع الخاص بك (shugly)
 5. **الإعدادات:**
    - Framework Preset: Create React App (سيتم اكتشافه تلقائياً)
-   - Root Directory: `./shugly` (إذا كان المشروع داخل مجلد)
+   - Root Directory: `./` (أو اتركه فارغاً)
    - Build Command: `npm run build`
    - Output Directory: `build`
 6. **اضغط:** "Deploy"

@@ -13,6 +13,7 @@ root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <BrowserRouter
+        basename="/shugly"
         future={{
           v7_startTransition: true,
           v7_relativeSplatPath: true

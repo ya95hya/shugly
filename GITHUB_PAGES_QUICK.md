@@ -4,16 +4,16 @@
 
 ### 1️⃣ إنشاء مستودع على GitHub
 - اذهب إلى [github.com](https://github.com) → **New repository**
-- اسم المستودع: `shugly-iraq` (أو أي اسم)
+- اسم المستودع: `shugly`
 - اختر **Public** ⚠️ (مطلوب للنشر المجاني)
 - اضغط **Create repository**
 
 ### 2️⃣ تحديث package.json
-افتح `package.json` وعدّل السطر:
+افتح `package.json` وتأكد من السطر:
 ```json
-"homepage": "https://YOUR_USERNAME.github.io/shugly-iraq"
+"homepage": "https://ya95hya.github.io/shugly"
 ```
-استبدل `YOUR_USERNAME` باسم المستخدم الفعلي على GitHub.
+يجب أن يكون موجوداً وصحيحاً.
 
 ### 3️⃣ رفع المشروع
 ```bash
@@ -22,7 +22,7 @@ git init
 git add .
 git commit -m "Ready for GitHub Pages"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/shugly-iraq.git
+git remote add origin https://github.com/ya95hya/shugly.git
 git push -u origin main
 ```
 
@@ -40,11 +40,11 @@ npm run deploy
 ### 6️⃣ إعداد Firebase
 - [Firebase Console](https://console.firebase.google.com)
 - **Authentication** → **Settings** → **Authorized domains**
-- أضف: `YOUR_USERNAME.github.io`
+- أضف: `ya95hya.github.io`
 
 ## ✅ تم!
 
-موقعك الآن على: `https://YOUR_USERNAME.github.io/shugly-iraq`
+موقعك الآن على: `https://ya95hya.github.io/shugly`
 
 ---
 
