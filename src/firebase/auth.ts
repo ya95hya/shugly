@@ -27,6 +27,14 @@ export const registerUser = async (
   role: 'user' | 'worker' | 'admin' = 'user'
 ): Promise<UserCredential> => {
   try {
+    // Prevent admin role registration - admins must be created manually
+    if (role === 'admin') {
+      throw new Error('لا يمكن إنشاء حساب مسؤول من خلال التسجيل. يجب إنشاء حسابات المسؤولين يدوياً.');
+    }
+
+    // Ensure only valid roles
+    const validRole = (role === 'user' || role === 'worker') ? role : 'user';
+
     // Create user account
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     
@@ -41,14 +49,14 @@ export const registerUser = async (
       name,
       email,
       phone,
-      role,
+      role: validRole,
       createdAt: new Date()
     };
 
     await setDoc(doc(db, 'users', userCredential.user.uid), userData);
 
     // If user is a worker, create worker document
-    if (role === 'worker') {
+    if (validRole === 'worker') {
       const workerData = {
         uid: userCredential.user.uid,
         name,

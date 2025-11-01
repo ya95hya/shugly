@@ -30,7 +30,7 @@ const Register: React.FC = () => {
     phone: '',
     password: '',
     confirmPassword: '',
-    role: 'user' as 'user' | 'worker' | 'admin'
+    role: 'user' as 'user' | 'worker'
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -65,6 +65,8 @@ const Register: React.FC = () => {
     }
 
     try {
+      // formData.role is already restricted to 'user' | 'worker' by TypeScript
+      // No need to check for 'admin' as it's impossible due to type system
       await register(
         formData.email,
         formData.password,
@@ -150,11 +152,12 @@ const Register: React.FC = () => {
                     value={formData.role}
                     onChange={handleChange}
                   >
-                <option value="user">User (مستخدم)</option>
-                <option value="worker">Worker (عامل)</option>
-                <option value="admin">Admin (مسؤول)</option>
+                    <option value="user">مستخدم (User)</option>
+                    <option value="worker">عامل (Worker)</option>
                   </Select>
-                  
+                  <Text fontSize="sm" color="gray.500" mt={1}>
+                    يمكن للمسؤولين فقط إنشاء حسابات إدارية
+                  </Text>
                 </FormControl>
 
                 <FormControl isRequired>

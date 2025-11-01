@@ -77,11 +77,24 @@ export interface Service {
 export const getWorkers = async (): Promise<Worker[]> => {
   try {
     const workersRef = collection(db, 'workers');
-    const q = query(workersRef, where('availability', '==', true), orderBy('rating', 'desc'));
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({ ...doc.data(), uid: doc.id } as Worker));
+    // Try with orderBy first, if it fails (missing index), try without
+    try {
+      const q = query(workersRef, where('availability', '==', true), orderBy('rating', 'desc'));
+      const snapshot = await getDocs(q);
+      return snapshot.docs.map(doc => ({ ...doc.data(), uid: doc.id } as Worker));
+    } catch (orderByError: any) {
+      // If orderBy fails (likely missing index), fetch all and sort in memory
+      console.warn('OrderBy failed, fetching without orderBy:', orderByError);
+      const q = query(workersRef, where('availability', '==', true));
+      const snapshot = await getDocs(q);
+      const workers = snapshot.docs.map(doc => ({ ...doc.data(), uid: doc.id } as Worker));
+      // Sort in memory
+      return workers.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    }
   } catch (error) {
-    throw error;
+    console.error('Error fetching workers:', error);
+    // Return empty array instead of throwing to prevent app crash
+    return [];
   }
 };
 

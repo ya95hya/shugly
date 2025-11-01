@@ -9,11 +9,30 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+// Use basename from PUBLIC_URL (set in package.json homepage)
+// For GitHub Pages, PUBLIC_URL will be '/shugly'
+// For localhost, PUBLIC_URL will be undefined or empty
+const getBasename = () => {
+  const publicUrl = process.env.PUBLIC_URL;
+  if (!publicUrl) return undefined;
+  
+  // Extract pathname from PUBLIC_URL (e.g., 'https://ya95hya.github.io/shugly' -> '/shugly')
+  try {
+    const url = new URL(publicUrl);
+    return url.pathname !== '/' ? url.pathname : undefined;
+  } catch {
+    // If PUBLIC_URL is not a full URL, use it directly (e.g., '/shugly')
+    return publicUrl.startsWith('/') ? publicUrl : undefined;
+  }
+};
+
+const basename = getBasename();
+
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <BrowserRouter
-        basename="/shugly"
+        basename={basename}
         future={{
           v7_startTransition: true,
           v7_relativeSplatPath: true
