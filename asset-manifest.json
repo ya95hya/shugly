@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/shugly-iraq/static/js/main.ca05cd9e.js",
-    "index.html": "/shugly-iraq/index.html",
-    "main.ca05cd9e.js.map": "/shugly-iraq/static/js/main.ca05cd9e.js.map"
+    "main.js": "/shugly/static/js/main.755fd376.js",
+    "index.html": "/shugly/index.html",
+    "main.755fd376.js.map": "/shugly/static/js/main.755fd376.js.map"
   },
   "entrypoints": [
-    "static/js/main.ca05cd9e.js"
+    "static/js/main.755fd376.js"
   ]
 }
